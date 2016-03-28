@@ -1,4 +1,4 @@
-// @import 'normalize';
+@import 'normalize';
 
 $dark: #424652;
 $white: #FFFFFF;
@@ -138,6 +138,6 @@ hr {
 	}
 }
 
-// @import 'welcome';
-// @import 'post_project';
-// @import 'contact';
+@import 'homepage';
+@import 'posts';
+@import 'contact';
