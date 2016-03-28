@@ -3,9 +3,6 @@ class PostsController < ApplicationController
 	def index
 	end
 
-	def show
-	end
-
 	def new
 		@post = Post.new
 	end
@@ -18,6 +15,25 @@ class PostsController < ApplicationController
 		else
 			render 'new', notice: "Woops, Something Went Wrong!"
 		end
+	end
+
+	def show
+	end
+
+	def edit
+	end
+
+	def update
+		if @post.update post_params
+			redirect_to @post, notice: "Article Updated Successfully!"
+		else
+			render 'edit'
+		end
+	end
+
+	def destroy
+		@post.destroy
+		redirect_to posts_path
 	end
 
 	private
