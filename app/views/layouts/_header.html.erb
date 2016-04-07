@@ -3,7 +3,6 @@
 	<nav>
 		<%= link_to "Articles", posts_path %>
 		<a href="#">Tech</a>
-		<a href="#">Contact</a>
 		<% if user_signed_in? %>
 			<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 		<% end %>
