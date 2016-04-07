@@ -1,7 +1,7 @@
 <h1 id="page_title">Recent Tech Posts</h1>
 
 <div id="teches_wrapper" class="skinny_wrapper">
-	<%= @teches.each do |tech| %>
+	<% @teches.each do |tech| %>
 		<div class="tech">
 			<p class="date"><%= tech.created_at.strftime("%A, %B, %d") %></p>
 			<h2><a href="#"><%= link_to tech.title, tech %></a></h2>
