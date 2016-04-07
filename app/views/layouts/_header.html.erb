@@ -1,8 +1,8 @@
 <header id="main_navigation" class="clearfix">
 	<%= link_to "Yongle Lyu", root_path, class: "name" %>
 	<nav>
-		<%= link_to "Articles", posts_path %>
-		<a href="#">Tech</a>
+		<%= link_to "Article", posts_path %>
+		<%= link_to "Tech", teches_path %>
 		<% if user_signed_in? %>
 			<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 		<% end %>
