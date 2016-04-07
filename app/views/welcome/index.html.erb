@@ -1,17 +1,20 @@
+<%= content_for :title do %>
+	Welcome Friend!
+<% end %>
 <div class="wrapper wrapper_padding clearfix">
 		<div class="col-1 about homepage_content">
 			<h2>About</h2>
 			<hr>
 			<p>
-				We'll design + code a beautiful & minimalistic  & <a href="#">Blog Portfolio Site</a> where you can share what you're learning & show off what you've built
+				Howdy! I'm Yongle Lyu. Here, I will share something I find interesting and valuable with you guys, like the great book I have read, habits that boost my efficiency, new skills I have recently got.
 			</p>
 			<p>
-				I challenged myself to truly learn Ruby on Rails by building 12 web apps in 12 weeks. Each week I recorded a screencast to show you how I built each app.
+				Hope you find this site interesting and be helpful! You can also find me through <a href="https://github.com/lyltj2010" target="_blank">Github</a> or <a href="https://www.linkedin.com/in/yongle-lyu-913961106" target="_blank">LinkedIn.</a>
 			</p>
 		</div>
 
 		<div class="col-2 homepage_content">
-			<h2>Stuff I've Written</h2>
+			<h2><%= link_to "Stuff I'v Written", posts_path %></h2>
 			<hr>
 			<% @posts.each do |post| %>
 				<h3><a href="#"><%= link_to post.title, post %></a></h3>
@@ -20,7 +23,7 @@
 		</div>
 
 		<div class="col-3 homepage_content">
-			<h2>Stuff I've Built</h2>
+			<h2>Recent Tech Posts</h2>
 			<hr>
 			<h3><a href="#">Unicasts</a></h3>
 			<p class="date">Sunday Mar 27th</p>

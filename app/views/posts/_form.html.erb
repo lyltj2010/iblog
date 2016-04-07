@@ -11,13 +11,15 @@
 	<%= f.label :title %> <br>
 	<%= f.text_field :title %>
 	<br>
-	<br>
 
 	<%= f.label :content, "Write your article here" %> <br>
 	<%= f.text_area :content %>
 
 	<br>
+	<%= f.label :category, 'Category' %>&nbsp
+	<%= f.select :category, ['mindset', 'booknote', 'weblog', 'other']  %>
 	<br>
-	<%= f.submit %>
+	<br>
+	<%= f.submit "Submit"%>
 
 <% end %>
