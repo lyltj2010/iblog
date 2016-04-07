@@ -8,6 +8,7 @@ class TechesController < ApplicationController
 	end
 
 	def new
+		@tech = Tech.new
 	end
 
 	def create
@@ -18,7 +19,7 @@ class TechesController < ApplicationController
 
 	def update
 	end
-	
+
 	def destroy
 	end
 
@@ -26,6 +27,8 @@ class TechesController < ApplicationController
 	def find_tech
 		@tech = Post.find(params[:id])	
 	end
+
 	def tech_params
+		params.require(:tech).permit(:title, :content, :category)
 	end
 end
