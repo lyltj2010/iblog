@@ -1,8 +1,25 @@
 <header id="main_navigation" class="clearfix">
 	<%= link_to "Yongle Lyu", root_path, class: "name" %>
 	<nav>
-		<%= link_to "Article", posts_path %>
-		<%= link_to "Tech", teches_path %>
+		<div class="dropdown">
+			<%= link_to "Article", posts_path %>
+			<div class="dropdown_content">
+				<a href="#">mindset</a>
+				<a href="#">booknote</a>
+				<a href="#">iblog</a>
+				<a href="#">other</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<%= link_to "Tech", teches_path %>
+			<div class="dropdown_content">
+				<a href="#">rails</a>
+				<a href="#">python</a>
+				<a href="#">code</a>
+				<a href="#">other</a>
+			</div>	
+		</div>
 		<% if user_signed_in? %>
 			<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 		<% end %>

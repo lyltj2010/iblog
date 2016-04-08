@@ -114,7 +114,26 @@ hr {
 			color: $dark;
 			text-decoration: none;
 			margin: 0 1rem;
-			font-size: 1rem;
+			font-size: 1.2rem;
+			&:hover {
+				color: $highlight;
+			}
+		}
+		.dropdown {
+			float: left;
+			&:hover {
+				.dropdown_content {
+					display: block;
+				}
+			}
+		}
+		.dropdown_content {
+			position: absolute;
+			display: none;
+			a {
+				display: block;
+				text-align: center;
+			}
 		}
 	} 
 }
