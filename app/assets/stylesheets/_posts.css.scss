@@ -77,6 +77,12 @@
 		margin: 2em auto;
 	}
 }
+
+#content {
+	a {
+		color: $highlight;
+	}	
+}
 //---------Pagenation
 .pagination:before,
 .pagination:after {
