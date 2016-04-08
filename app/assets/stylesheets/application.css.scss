@@ -130,9 +130,15 @@ hr {
 		.dropdown_content {
 			position: absolute;
 			display: none;
+			background-color: $white;
 			a {
 				display: block;
-				text-align: center;
+				text-align: left;
+				padding-left: 3px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				border-bottom: 1px solid $border;
+				// background-color: $border;
 			}
 		}
 	} 
