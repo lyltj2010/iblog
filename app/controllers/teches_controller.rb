@@ -2,7 +2,12 @@ class TechesController < ApplicationController
 	before_action :find_tech, only: [:show, :edit, :update, :destroy]
 	before_action :authenticate_user!, except: [:index, :show]
 	def index
-		@teches = Tech.all.order('created_at desc').paginate(page: params[:page], per_page: 7)
+		category = params[:category]
+		if category
+			@teches = Tech.where("category = ?", category).order('created_at desc').paginate(page: params[:page], per_page: 7)
+		else
+			@teches = Tech.all.order('created_at desc').paginate(page: params[:page], per_page: 7)
+		end
 	end
 
 	def show

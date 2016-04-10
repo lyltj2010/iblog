@@ -4,20 +4,20 @@
 		<div class="dropdown">
 			<%= link_to "Article", posts_path %>
 			<div class="dropdown_content">
-				<a href="#">mindset</a>
-				<a href="#">booknote</a>
-				<a href="#">iblog</a>
-				<a href="#">other</a>
+				<%= link_to "mindset", teches_path(:category => 'mindset') %>
+				<%= link_to "booknote", teches_path(:category => 'booknote') %>
+				<%= link_to "iblog", teches_path(:category => 'iblog') %>
+				<%= link_to "other", teches_path(:category => 'other') %>
 			</div>
 		</div>
 
 		<div class="dropdown">
 			<%= link_to "Tech", teches_path %>
 			<div class="dropdown_content">
-				<a href="#">rails</a>
-				<a href="#">python</a>
-				<a href="#">code</a>
-				<a href="#">other</a>
+				<%= link_to "rails", teches_path(:category => 'rails') %>
+				<%= link_to "python", teches_path(:category => 'python') %>
+				<%= link_to "code", teches_path(:category => 'code') %>
+				<%= link_to "other", teches_path(:category => 'other') %>
 			</div>	
 		</div>
 		<% if user_signed_in? %>
