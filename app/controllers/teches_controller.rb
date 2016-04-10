@@ -40,10 +40,10 @@ class TechesController < ApplicationController
 
 	private
 	def find_tech
-		@tech = Tech.find(params[:id])	
+		@tech = Tech.friendly.find(params[:id])	
 	end
 
 	def tech_params
-		params.require(:tech).permit(:title, :content, :category)
+		params.require(:tech).permit(:title, :content, :category, :slug)
 	end
 end
