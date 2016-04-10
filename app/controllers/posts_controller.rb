@@ -4,9 +4,9 @@ class PostsController < ApplicationController
 	def index
 		category = params[:category]
 		if category
-			@teches = Tech.where("category = ?", category).order('created_at desc').paginate(page: params[:page], per_page: 7)
+			@posts = Post.where("category = ?", category).order('created_at desc').paginate(page: params[:page], per_page: 7)
 		else
-			@teches = Tech.all.order('created_at desc').paginate(page: params[:page], per_page: 7)
+			@posts = Post.all.order('created_at desc').paginate(page: params[:page], per_page: 7)
 		end
 	end
 
